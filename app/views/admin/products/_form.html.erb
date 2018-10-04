@@ -1,0 +1,10 @@
+<%= render partial: 'admin/shared/validation_errors', locals: {object: @product} %>
+
+<%= form_for [:admin, @product], html: { multipart: true } do |f| %>
+  <p><%= f.text_field :name, placeholder: 'Product name' %></p>
+  <p><%= f.text_field :price, placeholder: 'Product price' %></p>
+  <p><%= f.text_area :description, placeholder: 'Product description' %></p>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit 'Save Product' %></p>
+<% end %>
+ 

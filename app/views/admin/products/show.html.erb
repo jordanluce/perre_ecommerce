@@ -1,0 +1,6 @@
+<h3>Product</h3>
+
+<p>product: <%= @product.name %></p>
+<p>price: <%= currency(@product.price) %></p>
+<p>description: <%= @product.description %></p>
+<p><%= image_tag @product.image.url(:thumb) %></p>
