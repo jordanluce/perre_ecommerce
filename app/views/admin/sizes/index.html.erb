@@ -1,0 +1,11 @@
+<h3>index</h3>
+
+<%= render partial: 'form' %>
+
+<% @sizes.each do |size| %>
+  <p>
+    <%= size.name %>
+    <%= link_to 'edit', edit_admin_size_path(size) %>
+    <%= link_to 'delete', admin_size_path(size), method: :delete, data: {confirm: 'Are you sure? '} %>
+  </p>
+<% end %>

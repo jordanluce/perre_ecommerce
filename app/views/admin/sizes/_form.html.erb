@@ -1,0 +1,5 @@
+<p><%= render partial: 'admin/shared/validation_errors', locals: {object: @size} %></p>
+<%= form_for [:admin, @size] do |f| %>
+  <p><%= f.text_field :name, placeholder: 'size' %></p>
+  <p><%= f.submit 'Save size' %></p>
+<% end %>
